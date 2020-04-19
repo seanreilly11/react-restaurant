@@ -83,6 +83,20 @@ const initialState = {
             image: "male2.jpg",
         },
     ],
+    times: [
+        {
+            text: "Breakfast",
+            id: "brek",
+        },
+        {
+            text: "Lunch",
+            id: "lunch",
+        },
+        {
+            text: "Dinner",
+            id: "din",
+        },
+    ],
 };
 
 // creat context

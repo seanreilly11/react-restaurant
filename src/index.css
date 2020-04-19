@@ -226,6 +226,10 @@ nav a {
 }
 
 /*meals sections*/
+.section-grow {
+    overflow: hidden;
+    cursor: pointer;
+}
 .section {
     width: 100vw;
     display: flex;
@@ -234,7 +238,7 @@ nav a {
     height: 35vh;
     border: none;
     outline: none;
-    transition: transform 1s ease-in-out;
+    transition: transform 350ms ease-in-out;
 }
 .section:hover {
     transform: scale(1.05);
@@ -247,7 +251,7 @@ nav a {
     font-size: 2.5em;
     font-weight: 500;
     text-transform: uppercase;
-    transition: transform 1s ease-in-out;
+    transition: transform 700ms ease-in-out;
 }
 
 .anchor-noline {
@@ -258,8 +262,8 @@ nav a {
 /*section backgrounds*/
 .breakfast {
     background-image: radial-gradient(
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.4)
+            rgba(255, 255, 255, 0.3) 5%,
+            rgba(255, 255, 255, 0)
         ),
         url("./assets/brekkie.jpg");
     background-size: cover;
@@ -268,8 +272,8 @@ nav a {
 
 .lunch {
     background-image: radial-gradient(
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.4)
+            rgba(255, 255, 255, 0.3) 5%,
+            rgba(255, 255, 255, 0)
         ),
         url("./assets/lunch.jpg");
     background-size: cover;
@@ -278,8 +282,8 @@ nav a {
 
 .dinner {
     background-image: radial-gradient(
-            rgba(255, 255, 255, 0.5),
-            rgba(255, 255, 255, 0.4)
+            rgba(255, 255, 255, 0.3) 5%,
+            rgba(255, 255, 255, 0)
         ),
         url("./assets/dinner.jpg");
     background-size: cover;
