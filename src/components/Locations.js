@@ -19,14 +19,16 @@ export const Locations = ({ location }) => {
             <div className="hours">
                 <h3 className="location__info">Opening Hours</h3>
                 <table>
-                    <tr>
-                        <td>Sun-Thurs:</td>
-                        <td>{location.openWeek}</td>
-                    </tr>
-                    <tr>
-                        <td>Fri-Sat:</td>
-                        <td>{location.openWeekend}</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Sun-Thurs:</td>
+                            <td>{location.openWeek}</td>
+                        </tr>
+                        <tr>
+                            <td>Fri-Sat:</td>
+                            <td>{location.openWeekend}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

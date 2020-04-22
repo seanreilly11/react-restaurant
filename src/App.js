@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import { LocationsList } from "./components/LocationsList";
 import { TeamList } from "./components/TeamList";
 import { MenuPage } from "./components/MenuPage";
+import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
     return (

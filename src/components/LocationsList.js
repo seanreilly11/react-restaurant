@@ -9,7 +9,7 @@ export const LocationsList = () => {
     return (
         <>
             <Navbar />
-            <div class="location-grid-container grid-container">
+            <div className="location-grid-container grid-container">
                 {locations.map((location, i) => (
                     <Locations key={i} location={location} />
                 ))}
