@@ -22,9 +22,9 @@ export const ContactPage = () => {
                     <label htmlFor="purpose">Purpose</label>
                     <select name="purpose" id="purpose">
                         <option value="none">Please Select Purpose</option>
-                        <option value="welly">Functions/Catering</option>
-                        <option value="upper">Locations</option>
-                        <option value="akl">Other</option>
+                        <option value="func">Functions/Catering</option>
+                        <option value="loc">Locations</option>
+                        <option value="other">Other</option>
                     </select>
 
                     <label htmlFor="location">Location</label>
