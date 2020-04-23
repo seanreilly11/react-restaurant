@@ -11,7 +11,9 @@ export const Home = () => {
                     <h1>Kitchen Food Restaurant</h1>
                     <p>Order online or eat in store</p>
                     <Link to="menu">
-                        <button className="orderButtonLarge">ORDER NOW</button>
+                        <button className="order-button-large">
+                            ORDER NOW
+                        </button>
                     </Link>
                 </div>
             </div>

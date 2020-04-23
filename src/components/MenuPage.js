@@ -1,8 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { Navbar } from "./Navbar";
 import { GlobalContext } from "../context/GlobalState";
 import { Menu } from "./Menu";
 import { Footer } from "./Footer";
+
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 export const MenuPage = () => {
     const { times, food } = useContext(GlobalContext);
@@ -10,10 +12,14 @@ export const MenuPage = () => {
     const [showMenu, setShowMenu] = useState(false);
     const [meal, setMeal] = useState("");
 
+    const myRef = useRef();
+
     const handleMeal = (id) => {
         setClickedMenuList(food.filter((food) => food.meal.includes(id)));
         setShowMenu(true);
         setMeal(id);
+        scrollToRef(myRef);
+        console.log(myRef);
     };
 
     return (
@@ -33,6 +39,7 @@ export const MenuPage = () => {
                     </section>
                 </div>
             ))}
+            <div ref={myRef}></div>
             {showMenu ? <Menu meal={meal} menu={clickedMenuList} /> : ""}
             <Footer />
         </>

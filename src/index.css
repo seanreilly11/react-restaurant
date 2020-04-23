@@ -9,7 +9,7 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: 100%;
     scroll-behavior: smooth;
 }
 
@@ -23,7 +23,7 @@ body {
             rgba(255, 255, 255, 0)
         ),
         url("./assets/banner.jpg");
-    background-position: left top;
+    background-position: center top;
     background-size: cover;
     min-height: 100vh;
 }
@@ -32,7 +32,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1rem;
+    width: 100%;
 }
 
 .wrapper {
@@ -44,7 +45,7 @@ header {
 
 .container {
     width: 60%;
-    min-width: 1000px;
+    min-width: 400px;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -58,21 +59,34 @@ header {
     display: grid;
 }
 
-nav {
-    flex: 0.9;
-    width: 50%;
-}
-
-nav ul {
+.nav-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    transition: transform 350ms ease-in-out;
+    transform-origin: right;
+    transform: scaleX(0);
 }
 
-nav a {
+.nav-list-item {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out 250ms;
+}
+
+.nav-list-item a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
     padding: 0.25rem 1rem;
     border-radius: 5px;
@@ -86,7 +100,36 @@ nav li a:hover {
     border-bottom: 5px solid #cbae86;
 }
 
-.orderButton {
+.nav-bars {
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.nav-bars-close {
+    color: #fff;
+    position: fixed;
+    top: 8.5vh;
+    right: 4vw;
+}
+
+.nav-bars:active {
+    transform: scale(0.95);
+}
+
+.expanded {
+    transform: scaleX(1);
+}
+
+.expanded .nav-list-item {
+    opacity: 1;
+    transition: opacity 0s ease-in-out;
+}
+
+.order-button-link {
+    display: none;
+}
+
+.order-button {
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     background: transparent;
@@ -95,14 +138,15 @@ nav li a:hover {
     cursor: pointer;
     border-radius: 5px;
     transition: background 350ms ease-in-out;
+    /* display: none; */
 }
 
-.orderButton a {
+.order-button a {
     color: #000;
     text-decoration: none;
 }
 
-.orderButtonLarge {
+.order-button-large {
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
     background: transparent;
@@ -114,16 +158,16 @@ nav li a:hover {
     transition: background 350ms ease-in-out;
 }
 
-.orderButtonLarge:hover,
-.orderButton:hover {
+.order-button-large:hover,
+.order-button:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.orderButtonLarge:active {
+.order-button-large:active {
     transform: scale(0.95);
 }
 
-.orderButtonLarge a {
+.order-button-large a {
     color: #000;
     text-decoration: none;
 }
@@ -150,14 +194,16 @@ nav li a:hover {
     width: 80%;
     margin: 1rem auto;
     border-left: 2px solid #cbae86;
-    padding-left: 100px;
+    padding-left: 5%;
 }
+
 .menu-heading {
     position: relative;
     text-transform: capitalize;
     padding: 1.5rem 0;
     font-size: 2.5rem;
 }
+
 .menu-heading::after {
     content: "";
     position: absolute;
@@ -173,18 +219,22 @@ nav li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin: 2rem 0;
+}
+
+.menu-item-title {
+    flex-basis: 50%;
+    padding-right: 0.25rem;
 }
 
 .menu-item-center {
     flex: 1;
     text-align: left;
+    margin-top: 0.25rem;
+    padding-right: 0.25rem;
 }
 
-.menu-item-center p:nth-child(3) {
-    font-weight: bold;
-    font-size: 1.25rem;
-}
 .addToCartBtn {
     font-size: 1rem;
     padding: 0.5rem;
@@ -193,11 +243,7 @@ nav li a:hover {
     outline: none;
     cursor: pointer;
     float: right;
-}
-
-.menu-item-title {
-    /* float: left; */
-    width: 25%;
+    flex-basis: 50%;
 }
 
 /*hidden menu*/
@@ -507,6 +553,7 @@ table td:nth-child(even) {
 .row {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -552,11 +599,65 @@ select {
     align-items: center;
     padding: 2rem;
     font-size: 0.7rem;
+    text-align: center;
 }
 
 /*# sourceMappingURL=sass.css.map */
 @media (min-width: 578px) {
+    html {
+        font-size: 112%;
+    }
+    header {
+        padding: 1rem 3rem;
+    }
     .location-grid-container {
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+    .row {
+        flex-direction: row;
+    }
+}
+@media (min-width: 768px) {
+    .menu-item-title {
+        flex-basis: 30%;
+    }
+
+    .menu-item-center {
+        margin-top: 0;
+    }
+
+    .addToCartBtn {
+        flex-basis: auto;
+        order: 3;
+    }
+
+    nav {
+        flex: 0.9;
+        width: 50%;
+    }
+
+    .nav-list {
+        justify-content: space-around;
+        flex-direction: row;
+        transform: scale(1);
+        background: transparent;
+        position: relative;
+    }
+
+    .nav-list-item {
+        opacity: 1;
+        font-size: 1rem;
+    }
+
+    .nav-list-item a {
+        color: #000;
+    }
+
+    .nav-bars {
+        display: none;
+    }
+
+    .order-button-link {
+        display: block;
     }
 }
