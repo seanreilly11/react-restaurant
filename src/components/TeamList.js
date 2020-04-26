@@ -9,7 +9,7 @@ export const TeamList = () => {
     return (
         <>
             <Navbar />
-            <div class="team-grid-container grid-container">
+            <div className="team-grid-container grid-container">
                 {team.map((team, i) => (
                     <Team key={i} team={team} />
                 ))}

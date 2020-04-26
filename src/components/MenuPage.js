@@ -47,27 +47,27 @@ export const MenuPage = () => {
             <div ref={myRef}></div>
             {showMenu ? (
                 <>
-                    <div class="hidden-nav">
+                    <div className="hidden-nav">
                         <div
-                            class="hidden-nav-list"
+                            className="hidden-nav-list"
                             onClick={() => handleMeal("breakfast")}
                         >
                             <FontAwesomeIcon icon={faCoffee} />
-                            <p class="hidden-nav-title">Breakfast</p>
+                            <p className="hidden-nav-title">Breakfast</p>
                         </div>
                         <div
-                            class="hidden-nav-list"
+                            className="hidden-nav-list"
                             onClick={() => handleMeal("lunch")}
                         >
                             <FontAwesomeIcon icon={faHotdog} />
-                            <p class="hidden-nav-title">Lunch</p>
+                            <p className="hidden-nav-title">Lunch</p>
                         </div>
                         <div
-                            class="hidden-nav-list"
+                            className="hidden-nav-list"
                             onClick={() => handleMeal("dinner")}
                         >
                             <FontAwesomeIcon icon={faHamburger} />
-                            <p class="hidden-nav-title">Dinner</p>
+                            <p className="hidden-nav-title">Dinner</p>
                         </div>
                     </div>{" "}
                     <Menu meal={meal} menu={clickedMenuList} />

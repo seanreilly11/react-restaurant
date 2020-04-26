@@ -173,7 +173,8 @@ const initialState = {
         },
         {
             name: "Ribeye Steak",
-            description: "Succulent ribeye steak with garlic butter",
+            description:
+                "Ribeye steak with garlic butter cooked to your liking",
             price: 24,
             meal: ["dinner"],
         },
@@ -184,7 +185,6 @@ const initialState = {
             meal: ["dinner"],
         },
     ],
-    currentMenu: null,
 };
 
 // creat context
@@ -207,7 +207,6 @@ export const GlobalProvider = ({ children }) => {
                 locations: state.locations,
                 team: state.team,
                 food: state.food,
-                currentMenu: state.currentMenu,
                 addCurrentMenu,
             }}
         >
