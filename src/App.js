@@ -11,7 +11,7 @@ function App() {
         <Router>
             <div className="App">
                 <Switch>
-                    <Route path="/" component={Home} exact />
+                    <Route path="/react-restaurant" component={Home} exact />
                     <Route path="/menu" component={MenuPage} />
                     <Route path="/locations" component={LocationsList} />
                     <Route path="/team" component={TeamList} />
