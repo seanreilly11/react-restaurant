@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/react-restaurant/static/css/main.497827b2.chunk.css",
+    "main.js": "/react-restaurant/static/js/main.ce1887d7.chunk.js",
+    "main.js.map": "/react-restaurant/static/js/main.ce1887d7.chunk.js.map",
+    "runtime-main.js": "/react-restaurant/static/js/runtime-main.1edc9eee.js",
+    "runtime-main.js.map": "/react-restaurant/static/js/runtime-main.1edc9eee.js.map",
+    "static/js/2.454e8192.chunk.js": "/react-restaurant/static/js/2.454e8192.chunk.js",
+    "static/js/2.454e8192.chunk.js.map": "/react-restaurant/static/js/2.454e8192.chunk.js.map",
+    "index.html": "/react-restaurant/index.html",
+    "precache-manifest.a6ee265256f63464033768d80f0e542d.js": "/react-restaurant/precache-manifest.a6ee265256f63464033768d80f0e542d.js",
+    "service-worker.js": "/react-restaurant/service-worker.js",
+    "static/css/main.497827b2.chunk.css.map": "/react-restaurant/static/css/main.497827b2.chunk.css.map",
+    "static/js/2.454e8192.chunk.js.LICENSE.txt": "/react-restaurant/static/js/2.454e8192.chunk.js.LICENSE.txt",
+    "static/media/akl.jpg": "/react-restaurant/static/media/akl.a27eb74b.jpg",
+    "static/media/banner.jpg": "/react-restaurant/static/media/banner.ace9d0fb.jpg",
+    "static/media/brekkie.jpg": "/react-restaurant/static/media/brekkie.e45bf5ce.jpg",
+    "static/media/chch.jpg": "/react-restaurant/static/media/chch.6fce3295.jpg",
+    "static/media/dinner.jpg": "/react-restaurant/static/media/dinner.77ffb6b8.jpg",
+    "static/media/female1.jpg": "/react-restaurant/static/media/female1.4a5000fa.jpg",
+    "static/media/female2.jpg": "/react-restaurant/static/media/female2.a9b68f88.jpg",
+    "static/media/female3.jpg": "/react-restaurant/static/media/female3.e2e167e2.jpg",
+    "static/media/female4.jpg": "/react-restaurant/static/media/female4.c050b5de.jpg",
+    "static/media/female5.jpg": "/react-restaurant/static/media/female5.de7d1a40.jpg",
+    "static/media/lunch.jpg": "/react-restaurant/static/media/lunch.343ecaf8.jpg",
+    "static/media/male1.jpg": "/react-restaurant/static/media/male1.ba73b3c8.jpg",
+    "static/media/male2.jpg": "/react-restaurant/static/media/male2.dc4df77d.jpg",
+    "static/media/male3.jpg": "/react-restaurant/static/media/male3.a554e559.jpg",
+    "static/media/male4.jpg": "/react-restaurant/static/media/male4.d9c22651.jpg",
+    "static/media/upperhutt.jpg": "/react-restaurant/static/media/upperhutt.31646e97.jpg",
+    "static/media/welly.jpg": "/react-restaurant/static/media/welly.b9c1fdfa.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1edc9eee.js",
+    "static/js/2.454e8192.chunk.js",
+    "static/css/main.497827b2.chunk.css",
+    "static/js/main.ce1887d7.chunk.js"
+  ]
+}
