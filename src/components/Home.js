@@ -12,7 +12,7 @@ export const Home = () => {
                     <p>Order online or eat in store</p>
                     <Link to="menu">
                         <button className="order-button-large">
-                            ORDER NOW
+                            CHECK OUT OUT MENU
                         </button>
                     </Link>
                 </div>
